@@ -1,8 +1,14 @@
-function StarshipDetails() {
+import { Link } from 'react-router-dom';
+
+
+function StarshipDetails(props) {
+    const ship = props.location.state;
+
     return(
         <div>
-        <h1>Details Here</h1>
-
+        <p>NAME: {ship.name}</p> 
+        <p>MODEL: {ship.model}</p>
+        <Link to='/'>Return</Link>
         </div>
     )
 }

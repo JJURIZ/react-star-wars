@@ -1,3 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: azure;
+}
+
+.App {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.ship-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-items: center;
+    border: 1px solid green;
+}
+
+.ship-item {
+    border: 1px solid red;
+    border-radius: 10%;
+    width: 200px;
+    height: 150px;
+}
+
+.ship-text {
+    text-decoration: none;
+    color: red;
+    border: 1px solid yellow;
+    margin-top: 75px;
+    word-wrap: break-word;
 }

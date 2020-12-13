@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom'
+
 function Starships(props) {
     const starshipList = props.starships.map((ship, idx) => {
-        return <li key={idx}>{ship.name}</li>
+        return <div className="ship-item"><p className="ship-text" key={idx}><Link to={{pathname: '/starship', state: ship}} key={ship.name}>{ship.name}</Link></p></div>
     })
+    
     return(
-        <ul>
-            <h1>This is a test</h1>
-            <li>{starshipList}</li>
-        </ul>
+        <div className="ship-container">
+            {starshipList}
+        </div>
     )
 }
 
