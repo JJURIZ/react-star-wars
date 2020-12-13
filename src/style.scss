@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -5,36 +7,74 @@
 }
 
 body {
-    background-color: azure;
+    font-family: 'Bungee', cursive;
+    color:#f7ec12;
+    background-color: black;
 }
 
 .App {
-    position: absolute;
-    top: 10%;
-    left: 25%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .ship-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     column-gap: 10px;
     row-gap: 10px;
     justify-items: center;
-    border: 1px solid green;
 }
 
 .ship-item {
-    border: 1px solid red;
-    border-radius: 10%;
+    height: 100px;
     width: 200px;
-    height: 150px;
+    background-color: #1d4388;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ship-item:hover {
+    background-color: #06348a;
 }
 
 .ship-text {
+    width: 150px;
+    margin: 0 auto;
+}
+
+a {
     text-decoration: none;
-    color: red;
-    border: 1px solid yellow;
-    margin-top: 75px;
-    word-wrap: break-word;
+    color: #f7ec12;
+    cursor: pointer;
+}
+
+.return {
+   color:  #cb3827;
+   font-size: 20px;
+   margin-top: 10px;
+}
+
+.ship-detail {
+    height: 200px;
+    width: 400px;
+    background-color: #1d4388;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-text {
+    margin: 5px 0 5px 0;
+}
+
+.star-wars-header {
+    margin: 5px 0 10px 0;
 }

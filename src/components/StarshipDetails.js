@@ -5,10 +5,10 @@ function StarshipDetails(props) {
     const ship = props.location.state;
 
     return(
-        <div>
-        <p>NAME: {ship.name}</p> 
-        <p>MODEL: {ship.model}</p>
-        <Link to='/'>Return</Link>
+        <div className="ship-detail">
+        <p className="detail-text">NAME: {ship.name}</p> 
+        <p className="detail-text">MODEL: {ship.model}</p>
+        <Link to='/'><p className="return">Return</p></Link>
         </div>
     )
 }

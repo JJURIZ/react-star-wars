@@ -36,7 +36,7 @@ function App() {
     return (
       <BrowserRouter>
         <div className="App">
-          <h1>Star Wars Ships</h1>
+          <h1 className="star-wars-header">Star Wars Ships</h1>
           <Switch>
             <Route
               path="/"
