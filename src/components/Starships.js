@@ -1,14 +1,11 @@
 function Starships(props) {
-    
-    for (const name in props.starships.data) {
-        if (props.starships.data.hasOwnProperty(name[1].name))
-        return {name}
-    }
+    const starshipList = props.starships.map((ship, idx) => {
+        return <li key={idx}>{ship.name}</li>
+    })
     return(
         <ul>
             <h1>This is a test</h1>
-            <li>{props.name}</li>
-            {console.log(`this is ${Object.entries(props.starships)}`)}
+            <li>{starshipList}</li>
         </ul>
     )
 }

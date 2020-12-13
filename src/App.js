@@ -11,20 +11,22 @@ function App() {
   const [starships, setStarships] = useState([]);
 
 
-  useEffect(() => {
-    axios.get(`https://swapi.dev/api/starships/13/`)
+  const handleSubmit = () => {
+    axios.get(`https://swapi.dev/api/starships/`)
       .then(
-        (result) => {
-          // console.log(result)
+        (results) => {
           setIsLoaded(true);
-          setStarships(result);
+          setStarships(results.data.results);
         },
         (error) => {
           setIsLoaded(true);
           setError(error);
         }
-      )
-  },[starships])
+      )}
+      useEffect(() => {
+        handleSubmit()
+    
+  },[])
 
   if (error) {
     return <div>Error: {error.message}</div>;
